@@ -3,22 +3,11 @@ import reactLogo from "./assets/react.svg";
 import { Reducer } from "react";
 import "./App.css";
 import { useReducer } from "react";
-export const up_ACTION = {type:"UP"}
+import { UP_ACTION,DOWN_ACTION,RESET_ACTION,RANDOM_ACTION } from "./components/store/actions/counter-actions";
+import { reducer } from "./components/store/reducers/counter-reducer";
 export let inatliesState = 0;
 
-export const reducer = (state, action) => {
-  switch (action.type) {
-    case "UP":
-      return state + 1;
-    case "DOWN":
-      return state - 1;
-    case "RESET":
-      return state = 0 ;
 
-    default:
-      return state;
-  }
-};
 
 function App() {
   const [firstSatate,dispatch]=useReducer(reducer , inatliesState);
@@ -26,9 +15,10 @@ function App() {
   return(
   <div className="App">
       <h1>{firstSatate}</h1>
-      <button onClick={()=>dispatch({type:"UP"})}>countUp</button>
-      <button onClick={()=>dispatch({type:"DOWN"})}>countDown</button>
-      <button onClick={()=>dispatch({type:"RESET"})}>countReset</button>
+      <button onClick={()=>dispatch(UP_ACTION)}>countUp</button>
+      <button onClick={()=>dispatch(DOWN_ACTION)}>countDown</button>
+      <button onClick={()=>dispatch(RESET_ACTION)}>countReset</button>
+      <button onClick={()=>dispatch(RANDOM_ACTION)}>counterRandom</button>
   </div>
   )
 }
