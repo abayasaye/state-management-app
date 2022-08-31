@@ -18,7 +18,7 @@ function App() {
       <button onClick={()=>dispatch(UP_ACTION)}>countUp</button>
       <button onClick={()=>dispatch(DOWN_ACTION)}>countDown</button>
       <button onClick={()=>dispatch(RESET_ACTION)}>countReset</button>
-      <button onClick={()=>dispatch(RANDOM_ACTION)}>counterRandom</button>
+      <button onClick={()=>dispatch(RANDOM_ACTION)}>countRandom</button>
   </div>
   )
 }

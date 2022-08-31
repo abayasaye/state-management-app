@@ -9,7 +9,7 @@ export const reducer = (state, action) => {
     case RESET_ACTION.type:
       return (state = 0);
     case RANDOM_ACTION.type:
-      return Math.floor(Math.random()*100);
+      return Math.floor(Math.random()*100)+1;
 
     default:
       return state;
