@@ -8,7 +8,7 @@ export const reducer = (state, action) => {
       return state - 1;
     case RESET_ACTION:
       return (state = 0);
-    case  RANDOM_ACTION:
+    case RANDOM_ACTION:
       return action.payload ;
     case UPDATE_ACTION:
       return action.payload;

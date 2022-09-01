@@ -1,4 +1,4 @@
-import {  UP_ACTION ,DOWN_ACTION ,RESET_ACTION ,RANDOM_ACTION,UPDATE_ACTION,MATH_ACTION } from "./counter-types"
+import { UP_ACTION ,DOWN_ACTION ,RESET_ACTION ,RANDOM_ACTION,UPDATE_ACTION,MATH_ACTION } from "./counter-types"
 export const upAction =()=>{
     return {type : UP_ACTION }
 }
