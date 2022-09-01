@@ -3,11 +3,10 @@ import reactLogo from "./assets/react.svg";
 import { Reducer } from "react";
 import "./App.css";
 import { useReducer } from "react";
-import { upAction ,downAction,resetAction,randomAction,updateAction } from "./components/store/actions/counter-actions";
-import { reducer } from "./components/store/reducers/counter-reducer";
+import { upAction ,downAction,resetAction,randomAction,updateAction } from "./store/actions/counter-actions";
+import { reducer } from "./store/reducers/counter-reducer";
 export let inatliesState = 0;
 
-const MATH_SIGN =["+","-","*","/"]
 
 function App() {
   const [firstSatate,dispatch]=useReducer(reducer , inatliesState);

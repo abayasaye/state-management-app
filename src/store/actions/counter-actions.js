@@ -19,6 +19,7 @@ export const updateAction = (updateNumber)=>{
 }
 
 export const mathAction = (mathType)=>{
+    const MATH_SIGN =["+","-","*","/"]
     return {type :MATH_ACTION,payload : mathType}
 }
 
