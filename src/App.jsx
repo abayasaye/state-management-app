@@ -3,11 +3,11 @@ import reactLogo from "./assets/react.svg";
 import { Reducer } from "react";
 import "./App.css";
 import { useReducer } from "react";
-import { UP_ACTION,DOWN_ACTION,RESET_ACTION,RANDOM_ACTION } from "./components/store/actions/counter-actions";
+import { upAction ,downAction,resetAction,randomAction,updateAction } from "./components/store/actions/counter-actions";
 import { reducer } from "./components/store/reducers/counter-reducer";
 export let inatliesState = 0;
 
-
+const MATH_SIGN =["+","-","*","/"]
 
 function App() {
   const [firstSatate,dispatch]=useReducer(reducer , inatliesState);
@@ -15,10 +15,16 @@ function App() {
   return(
   <div className="App">
       <h1>{firstSatate}</h1>
-      <button onClick={()=>dispatch(UP_ACTION)}>countUp</button>
-      <button onClick={()=>dispatch(DOWN_ACTION)}>countDown</button>
-      <button onClick={()=>dispatch(RESET_ACTION)}>countReset</button>
-      <button onClick={()=>dispatch(RANDOM_ACTION)}>countRandom</button>
+      <button onClick={()=>dispatch(upAction())}>countUp</button>
+      <button onClick={()=>dispatch(downAction())}>countDown</button>
+      <button onClick={()=>dispatch(resetAction())}>countReset</button>
+      <button onClick={()=>dispatch(randomAction(Math.floor(Math.random()*100)+1))}>countRandom</button>
+      <button onClick={()=>dispatch(updateAction(100))}>countUpdate</button>
+      <button onClick={()=>dispatch(mathAction(
+        MATH_SIGN.map(mathItem=>
+          mathItem
+          )
+      ))}>actionMath</button>
   </div>
   )
 }
