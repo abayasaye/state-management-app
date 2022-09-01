@@ -9,3 +9,4 @@ const counterProvider = ({children})=>{
     </counterContext.Provider>
     )
 }
+export default counterProvider
