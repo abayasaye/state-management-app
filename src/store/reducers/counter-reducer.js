@@ -2,7 +2,7 @@ import { UP_ACTION ,DOWN_ACTION, RESET_ACTION,RANDOM_ACTION,UPDATE_ACTION, MATH_
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    case UP_ACTION:
+    case UP_ACTION :
       return state + 1;
     case DOWN_ACTION:
       return state - 1;

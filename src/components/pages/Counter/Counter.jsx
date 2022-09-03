@@ -12,7 +12,7 @@ const [firstSatate,dispatch]=useReducer(reducer , inatliesState);
     <div className="counter">
           <h1>COUNTER</h1>
       <h1>{firstSatate}</h1>
-      <button onClick={()=>dispatch(upAction())}>countUp</button>
+      <button onClick={()=> dispatch(upAction())}> countUp </button>
       <button onClick={()=>dispatch(downAction())}>countDown</button>
       <button onClick={()=>dispatch(resetAction())}>countReset</button>
       <button onClick={()=>dispatch(randomAction(Math.floor(Math.random()*100)+1))}>countRandom</button>

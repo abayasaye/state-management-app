@@ -4,7 +4,7 @@ export const upAction =()=>{
 }
 
 export const downAction = ()=>{
-    return{type:DOWN_ACTION}
+    return{type: DOWN_ACTION }
 }
 
 export const resetAction = ()=>{
